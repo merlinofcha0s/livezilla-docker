@@ -80,7 +80,7 @@ COPY conf/php-fpm-pool.conf /etc/php7/php-fpm.d/www.conf
 COPY conf/supervisord.conf /etc/supervisor/supervisord.conf
 COPY conf/nginx.conf /etc/nginx/nginx.conf
 COPY conf/nginx-site.conf /etc/nginx/conf.d/default.conf
-COPY conf/config.php /var/www/html/_config/config.php
+#COPY conf/config.php /var/www/html/_config/config.php
 COPY entrypoint.sh /sbin/entrypoint.sh
 
 USER root
