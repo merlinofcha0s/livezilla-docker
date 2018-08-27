@@ -12,12 +12,8 @@ ENV livezilla_ver 7.1.0.5
 ENV archive_url ${archive_url:-https://www.livezilla.net/downloads/pubfiles/livezilla_server_${livezilla_ver}.zip}
 
 RUN apk add --no-cache --update \
-    postgresql-client \
-    postgresql \
     mysql-client \
     php7 \
-    php7-redis \
-    php7-apcu \
     php7-bcmath \
     php7-dom \
     php7-ctype \
@@ -35,7 +31,6 @@ RUN apk add --no-cache --update \
     php7-openssl \
     php7-pdo \
     php7-pdo_mysql \
-    php7-pdo_pgsql \
     php7-pdo_sqlite \
     php7-phar \
     php7-posix \
