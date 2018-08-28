@@ -8,11 +8,13 @@ if [ "${INSTALL_MODE}" = "false" ]; then
 	sed 's,{{DB_USERNAME}},'"${DB_USERNAME}"',g' -i /var/www/html/_config/config.php
 	sed 's,{{DB_PASSWORD}},'"${DB_PASSWORD}"',g' -i /var/www/html/_config/config.php
 	sed 's,{{DB_PREFIX}},'"${DB_PREFIX}"',g' -i /var/www/html/_config/config.php
+	sed 's,{{DB_ENGINE}},'"${DB_ENGINE}"',g' -i /var/www/html/_config/config.php
 	sed 's,{{LIVEZILLA_ID}},'"${LIVEZILLA_ID}"',g' -i /var/www/html/_config/config.php
 	sed 's,{{LIVEZILLA_PR_CR}},'"${LIVEZILLA_PR_CR}"',g' -i /var/www/html/_config/config.php
-	
+	echo install mode false
 	rm -rf /var/www/html/install
 else
+	echo install mode true
 	rm -rf /var/www/html/_config/config.php
 fi
 
