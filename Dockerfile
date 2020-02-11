@@ -8,7 +8,7 @@ CMD ["/sbin/entrypoint.sh"]
 ARG livezilla_ver
 ARG archive_url
 
-ENV livezilla_ver 8.0.0.5
+ENV livezilla_ver 8.0.1.7
 ENV archive_url ${archive_url:-https://www.livezilla.net/downloads/pubfiles/livezilla_server_${livezilla_ver}.zip}
 
 RUN apk add --no-cache --update \
